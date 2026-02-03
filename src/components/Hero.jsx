@@ -36,8 +36,9 @@ const Hero = () => {
                     </Col>
 
                     <Col lg={5} className="home-image-col d-none d-lg-block" style={{
-                        backgroundImage: 'url("/minha-foto.jpg")'
-                    }}>
+                        backgroundImage: 'url("/minha-foto.jpg")',
+                        borderRadius: '20px',
+                        }}>
                         {/* The background image is set via inline style for easy user replacement */}
                     </Col>
                 </Row>

@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap,
-    FaNodeJs, FaDocker, FaGitAlt, FaFigma
+    FaNodeJs, FaGitAlt, FaFigma,
 } from 'react-icons/fa';
-import { SiRedux, SiExpress, SiPostman, SiFramer, SiTailwindcss, SiMongodb } from 'react-icons/si';
+import { SiLaravel, SiPostman, SiTailwindcss, SiMysql, SiWordpress, SiAdobephotoshop, SiPhp, SiAdobeillustrator } from 'react-icons/si';
 
 const skillCategories = [
     {
@@ -15,25 +15,26 @@ const skillCategories = [
             { name: "JavaScript", icon: <FaJs color="#F7DF1E" /> },
             { name: "React JS", icon: <FaReact color="#61DAFB" /> },
             { name: "Tailwind", icon: <SiTailwindcss color="#06B6D4" /> },
-            { name: "Redux", icon: <SiRedux color="#764ABC" /> }
+            { name: "WordPress", icon: <SiWordpress color="#ffffffff" /> },
         ]
     },
     {
         category: "Backend",
         skills: [
             { name: "Node JS", icon: <FaNodeJs color="#339933" /> },
-            { name: "Express", icon: <SiExpress color="#ffffff" /> },
-            { name: "Docker", icon: <FaDocker color="#2496ED" /> },
-            { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
-            { name: "Git", icon: <FaGitAlt color="#F05032" /> }
+            { name: "Laravel", icon: <SiLaravel color="#ea1212ff" /> },
+            { name: "PHP", icon: <SiPhp color="#70befaff" /> },
+            { name: "Mysql", icon: <SiMysql color="#f45709" /> },
+            { name: "Git", icon: <FaGitAlt color="#F05032" /> },
+            { name: "Postman", icon: <SiPostman color="#FF6C37" /> }
         ]
     },
     {
         category: "Design",
         skills: [
             { name: "Figma", icon: <FaFigma color="#F24E1E" /> },
-            { name: "Blender", icon: <SiFramer color="#EA8220" /> }, // Substitute for Blender if needed or use Generic
-            { name: "Postman", icon: <SiPostman color="#FF6C37" /> }
+            { name: "Photoshop", icon: <SiAdobephotoshop color="#370adbff" /> },
+            { name: "Illustrator", icon: <SiAdobeillustrator color="#ac5808ff" /> },
         ]
     }
 ];

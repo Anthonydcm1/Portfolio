@@ -37,7 +37,7 @@ const MyNavbar = () => {
                                 {item}
                             </a>
                         ))}
-                        <a
+                        {/* <a
                             href="/resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const MyNavbar = () => {
                             onClick={toggleMenu}
                         >
                             Resume
-                        </a>
+                        </a> */}
                     </nav>
                 </div>
             )}
