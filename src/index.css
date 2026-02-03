@@ -93,16 +93,56 @@ p {
 }
 
 .home-image-col {
-  height: 100vh;
+  height: 80vh;
   background-color: #151515;
   background-size: cover;
   background-position: center;
   position: relative;
+  border-radius: 50%;
+  border: 1px solid rgb(20, 186, 232);
+  box-shadow: 0 0 100px rgb(20, 186, 233);
 }
 
 @media (max-width: 991px) {
+  .home-image-mobile {
+    height: 300px;
+    /* Reduzido de 350px para 300px para caber melhor */
+    width: 300px;
+    background-color: #151515;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 1rem auto;
+    /* Margem lateral auto para centrar */
+    border: 1px solid rgb(20, 186, 232);
+    box-shadow: 0 0 50px rgb(20, 186, 233);
+    display: block;
+    /* Garante que o margin auto funciona */
+  }
+
   .home-image-col {
     display: none;
+  }
+
+  .intro-text-wrapper {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 6rem;
+    width: 100%;
+    /* Garante que ocupa a largura total */
+    overflow: hidden;
+    /* Evita que elementos como o SVG empurrem o layout */
+  }
+
+  .intro-subtitle img {
+    max-width: 100%;
+    margin-left: 50px;
+    /* Evita que o SVG da animação (435px) empurre o layout para a direita */
+    height: auto;
+  }
+
+  .intro-title {
+    font-size: 2.5rem;
   }
 }
 

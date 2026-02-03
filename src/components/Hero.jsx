@@ -12,6 +12,14 @@ const Hero = () => {
                             <h5 className="text-uppercase tracking-widest mb-4" style={{ letterSpacing: '8px', color: 'var(--secondary-text)' }}>
                                 Anthony Mendoza
                             </h5>
+
+                            {/* Imagem visível apenas no Mobile entre o nome e o título */}
+                            <div className="d-lg-none d-flex justify-content-center my-4">
+                                <div className="home-image-mobile" style={{
+                                    backgroundImage: 'url("/minha-foto.jpg")'
+                                }}></div>
+                            </div>
+
                             <h1 className="intro-title">
                                 I'm Anthony
                             </h1>
@@ -36,9 +44,8 @@ const Hero = () => {
                     </Col>
 
                     <Col lg={5} className="home-image-col d-none d-lg-block" style={{
-                        backgroundImage: 'url("/minha-foto.jpg")',
-                        borderRadius: '20px',
-                        }}>
+                        backgroundImage: 'url("/minha-foto.jpg")'
+                    }}>
                         {/* The background image is set via inline style for easy user replacement */}
                     </Col>
                 </Row>

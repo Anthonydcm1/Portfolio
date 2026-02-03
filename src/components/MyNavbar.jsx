@@ -10,9 +10,9 @@ const MyNavbar = () => {
 
     return (
         <header className="header-minimal">
-            <Link to="/" className="logo-minimal">
+            <a href="/#home" className="logo-minimal" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 AM
-            </Link>
+            </a>
 
             <div className="menu-btn" onClick={toggleMenu}>
                 <div className="menu-line"></div>
