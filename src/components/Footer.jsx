@@ -12,7 +12,7 @@ const Footer = ({ onContactClick }) => {
     return (
         <footer>
             <div className="text-center bg-black p-4">
-                <p>©2026 Anthony Mendoza | All rights reserved</p>
+                <p>©2026 Anthony Correia | All rights reserved</p>
                 <div className="d-flex justify-content-center align-items-center gap-4 my-4 flex-wrap">
                     <a href="#about" className="text-white text-decoration-none hover-opacity" onClick={(e) => scrollToSection(e, 'about')}>About</a>
                     <a href="#experience" className="text-white text-decoration-none hover-opacity" onClick={(e) => scrollToSection(e, 'experience')}>Experience</a>
@@ -26,7 +26,7 @@ const Footer = ({ onContactClick }) => {
                         <a href="mailto:anthonydcm1@gmail.com" className="text-white h5 hover-opacity m-0"><FaEnvelope /></a>
                     </div>
                 </div>
-                <p>Created by Anthony Mendoza</p>
+                <p>Created by Anthony Correia</p>
             </div>
         </footer>
     );
