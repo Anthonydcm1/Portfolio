@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-const ProjectCard = ({ title, description, link }) => {
+const ProjectCard = ({ title, description, image, link }) => {
     return (
         <div className="card-simple d-flex flex-column h-100">
+            <img src={image} alt={title} className="img-fluid mb-4" />
             <h3 className="h4 fw-bold mb-3">{title}</h3>
             <p className="small mb-4 flex-grow-1 opacity-75">
                 {description}

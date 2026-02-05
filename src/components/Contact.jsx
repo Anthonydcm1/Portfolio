@@ -1,7 +1,35 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Alert } from 'react-bootstrap';
 
 const Contact = () => {
+    const [status, setStatus] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+
+        try {
+            // REEMPLAZA "TU_ID_AQUI" con tu ID de Formspree (ej: xqywpnz)
+            const response = await fetch("https://formspree.io/f/xaqdwozn", {
+                method: "POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setStatus("SUCCESS");
+                form.reset();
+            } else {
+                setStatus("ERROR");
+            }
+        } catch (error) {
+            setStatus("ERROR");
+        }
+    };
+
     return (
         <section id="contact">
             <Container>
@@ -29,11 +57,22 @@ const Contact = () => {
                     </Col>
 
                     <Col lg={6}>
-                        <form>
-                            <input type="text" placeholder="Name" className="contact-input" />
-                            <input type="email" placeholder="Email" className="contact-input" />
-                            <textarea rows="4" placeholder="Message" className="contact-input"></textarea>
-                            <button type="submit" className="btn-minimal w-50">Send Message</button>
+                        {status === "SUCCESS" && (
+                            <Alert variant="success" className="mb-4 bg-transparent text-success border-success">
+                                Message sent successfully! I'll get back to you soon.
+                            </Alert>
+                        )}
+                        {status === "ERROR" && (
+                            <Alert variant="danger" className="mb-4 bg-transparent text-danger border-danger">
+                                Oops! An error occurred while sending the message.
+                            </Alert>
+                        )}
+
+                        <form onSubmit={handleSubmit}>
+                            <input type="text" name="name" placeholder="Name" className="contact-input" required />
+                            <input type="email" name="email" placeholder="Email" className="contact-input" required />
+                            <textarea name="message" rows="4" placeholder="Message" className="contact-input" required></textarea>
+                            <button type="submit" className="btn-minimal w-30">Send Message</button>
                         </form>
                     </Col>
                 </Row>
