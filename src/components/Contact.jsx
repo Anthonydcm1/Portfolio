@@ -33,12 +33,12 @@ const Contact = () => {
     return (
         <section id="contact">
             <Container>
-                <div className="section-title-wrapper">
+                <div className="section-title-wrapper" data-aos="fade-up">
                     <h2 className="section-title-main">Contact</h2>
                 </div>
 
                 <Row className="g-5">
-                    <Col lg={6}>
+                    <Col lg={6} data-aos="fade-right">
                         <h3 className="h4 fw-bold mb-4">Get in touch</h3>
                         <p className="opacity-75 mb-5">
                             I'm always open to discussing new projects, creative ideas or
@@ -56,7 +56,7 @@ const Contact = () => {
                         </div>
                     </Col>
 
-                    <Col lg={6}>
+                    <Col lg={6} data-aos="fade-left">
                         {status === "SUCCESS" && (
                             <Alert variant="success" className="mb-4 bg-transparent text-success border-success">
                                 Message sent successfully! I'll get back to you soon.
