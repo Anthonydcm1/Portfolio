@@ -18,7 +18,7 @@ const Hero = ({ onContactClick }) => {
                     <Col lg={7} className="d-flex align-items-center">
                         <div className="intro-text-wrapper ms-lg-5">
                             <h5 className="text-uppercase tracking-widest mb-4" style={{ letterSpacing: '8px', color: 'var(--secondary-text)' }} data-aos="fade-down">
-                                Anthony Mendoza
+                                Anthony Correia
                             </h5>
 
                             {/* Imagem visível apenas no Mobile entre o nome e o título */}
