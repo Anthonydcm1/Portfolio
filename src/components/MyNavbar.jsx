@@ -8,9 +8,18 @@ const MyNavbar = ({ onContactClick }) => {
         setIsActive(!isActive);
     };
 
+    const scrollToSection = (e, sectionId) => {
+        e.preventDefault();
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            if (isActive) toggleMenu();
+        }
+    };
+
     return (
         <header className="header-minimal">
-            <a href="/#home" className="logo-minimal" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <a href="#home" className="logo-minimal" onClick={(e) => scrollToSection(e, 'home')}>
                 AM
             </a>
 
@@ -30,9 +39,9 @@ const MyNavbar = ({ onContactClick }) => {
                         {['About', 'Experience', 'Skills', 'Projects'].map((item) => (
                             <a
                                 key={item}
-                                href={`/#${item.toLowerCase()}`}
+                                href={`#${item.toLowerCase()}`}
                                 className="text-white text-decoration-none display-5 fw-bold hover-opacity-50"
-                                onClick={toggleMenu}
+                                onClick={(e) => scrollToSection(e, item.toLowerCase())}
                             >
                                 {item}
                             </a>

@@ -6,7 +6,7 @@ const projectsData = [
     {
         id: 1,
         title: "Front-end Developer",
-        image: "/design-animated-front-end-of-website-in-react-js.png",
+        image: "design-animated-front-end-of-website-in-react-js.png",
         description: "Course of Front-end Developer at Cesae Digital.",
         link: "https://github.com/Anthonydcm1/Front-end_Curso_CesaeDigital.git"
     },
