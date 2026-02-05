@@ -3,6 +3,14 @@ import { Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Hero = ({ onContactClick }) => {
+    const scrollToSection = (e, sectionId) => {
+        e.preventDefault();
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section id="home" className="home-section p-0">
             <Container fluid className="p-0">
@@ -16,7 +24,7 @@ const Hero = ({ onContactClick }) => {
                             {/* Imagem visível apenas no Mobile entre o nome e o título */}
                             <div className="d-lg-none d-flex justify-content-center my-4" data-aos="zoom-in">
                                 <div className="home-image-mobile" style={{
-                                    backgroundImage: 'url("/minha-foto.jpg")'
+                                    backgroundImage: 'url("minha-foto.jpg")'
                                 }}></div>
                             </div>
 
@@ -30,10 +38,10 @@ const Hero = ({ onContactClick }) => {
                                 />
                             </div>
                             <div className="mt-5 d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="600">
-                                <a href="#work" className="btn-minimal">
+                                <a href="#projects" className="btn-minimal" onClick={(e) => scrollToSection(e, 'projects')}>
                                     My Portfolio
                                 </a>
-                                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-minimal" style={{ backgroundColor: 'white', color: 'black' }}>
+                                <a href="resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-minimal" style={{ backgroundColor: 'white', color: 'black' }}>
                                     Download CV
                                 </a>
                                 <button onClick={onContactClick} className="btn-minimal bg-transparent">
@@ -44,7 +52,7 @@ const Hero = ({ onContactClick }) => {
                     </Col>
 
                     <Col lg={5} className="home-image-col d-none d-lg-block" style={{
-                        backgroundImage: 'url("/minha-foto.jpg")'
+                        backgroundImage: 'url("minha-foto.jpg")'
                     }} data-aos="fade-left" data-aos-delay="400">
                         {/* The background image is set via inline style for easy user replacement */}
                     </Col>
