@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const MyNavbar = () => {
+const MyNavbar = ({ onContactClick }) => {
     const [isActive, setIsActive] = useState(false);
 
     const toggleMenu = () => {
@@ -27,7 +27,7 @@ const MyNavbar = () => {
                         <div className="text-white fs-1">×</div>
                     </div>
                     <nav className="d-flex flex-column align-items-center gap-4">
-                        {['About', 'Experience', 'Tech', 'Work', 'Contact'].map((item) => (
+                        {['About', 'Experience', 'Skills', 'Projects'].map((item) => (
                             <a
                                 key={item}
                                 href={`/#${item.toLowerCase()}`}
@@ -37,15 +37,12 @@ const MyNavbar = () => {
                                 {item}
                             </a>
                         ))}
-                        {/* <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white text-decoration-none display-5 fw-bold hover-opacity-50"
-                            onClick={toggleMenu}
+                        <button
+                            className="bg-transparent border-0 text-white text-decoration-none display-5 fw-bold hover-opacity-50"
+                            onClick={() => { toggleMenu(); onContactClick(); }}
                         >
-                            Resume
-                        </a> */}
+                            Contact
+                        </button>
                     </nav>
                 </div>
             )}

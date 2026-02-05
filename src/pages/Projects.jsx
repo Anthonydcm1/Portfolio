@@ -26,7 +26,7 @@ const projectsData = [
 
 const Projects = () => {
     return (
-        <section id="work" className="bg-transparent">
+        <section id="projects" className="bg-transparent">
             <Container>
                 <div className="section-title-wrapper" data-aos="fade-up">
                     <h2 className="section-title-main">Portfolio</h2>
