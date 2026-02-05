@@ -3,22 +3,22 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Experience from '../components/Experience';
 import Projects from './Projects';
-import Tech from '../components/Tech';
-import Contact from '../components/Contact';
-import Socials from '../components/Socials';
+import Skills from '../components/Skills';
 import Footer from '../components/Footer';
+import Socials from '../components/Socials';
+import CTA from '../components/CTA';
 
-const Home = () => {
+const Home = ({ onContactClick }) => {
     return (
         <>
             <Socials />
-            <Hero />
+            <Hero onContactClick={onContactClick} />
             <About />
             <Experience />
-            <Tech />
+            <Skills />
             <Projects />
-            <Contact />
-            <Footer />
+            <CTA onContactClick={onContactClick} />
+            <Footer onContactClick={onContactClick} />
         </>
     );
 };

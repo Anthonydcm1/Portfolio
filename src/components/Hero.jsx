@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Hero = () => {
+const Hero = ({ onContactClick }) => {
     return (
         <section id="home" className="home-section p-0">
             <Container fluid className="p-0">
@@ -36,9 +36,9 @@ const Hero = () => {
                                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-minimal" style={{ backgroundColor: 'white', color: 'black' }}>
                                     Download CV
                                 </a>
-                                <a href="#contact" className="btn-minimal">
+                                <button onClick={onContactClick} className="btn-minimal bg-transparent">
                                     Contact
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </Col>

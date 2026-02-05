@@ -39,9 +39,9 @@ const skillCategories = [
     }
 ];
 
-const Tech = () => {
+const Skills = () => {
     return (
-        <section id="tech" style={{ backgroundColor: '#111' }}>
+        <section id="skills" style={{ backgroundColor: '#111' }}>
             <Container>
                 <div className="text-center mb-5" data-aos="fade-up">
                     <h2 className="skills-heading">Skills</h2>
@@ -73,7 +73,7 @@ const Tech = () => {
     );
 };
 
-export default Tech;
+export default Skills;
 
 
 
