@@ -3,10 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const experiences = [
     // {
-        // title: "Full Stack Developer",
-        // company_name: "CESAE Digital",
-        // date: "2025 - Present",
-        // points: ["Leading cloud-native application development.", "CI/CD pipeline management."]
+    // title: "Full Stack Developer",
+    // company_name: "CESAE Digital",
+    // date: "2025 - Present",
+    // points: ["Leading cloud-native application development.", "CI/CD pipeline management."]
     // },
     {
         title: "Bachelor's Degree in Computer Science",
@@ -32,12 +32,12 @@ const Experience = () => {
     return (
         <section id="experience">
             <Container>
-                <div className="section-title-wrapper">
+                <div className="section-title-wrapper" data-aos="fade-up">
                     <h2 className="section-title-main">Experience</h2>
                 </div>
 
                 {experiences.map((exp, index) => (
-                    <Row key={index} className="mb-5 align-items-baseline">
+                    <Row key={index} className="mb-5 align-items-baseline" data-aos="fade-up" data-aos-delay={index * 100}>
                         <Col md={3}>
                             <h5 className="fw-bold opacity-50">{exp.date}</h5>
                         </Col>

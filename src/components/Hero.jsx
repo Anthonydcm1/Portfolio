@@ -9,27 +9,27 @@ const Hero = () => {
                 <Row className="m-0 g-0">
                     <Col lg={7} className="d-flex align-items-center">
                         <div className="intro-text-wrapper ms-lg-5">
-                            <h5 className="text-uppercase tracking-widest mb-4" style={{ letterSpacing: '8px', color: 'var(--secondary-text)' }}>
+                            <h5 className="text-uppercase tracking-widest mb-4" style={{ letterSpacing: '8px', color: 'var(--secondary-text)' }} data-aos="fade-down">
                                 Anthony Mendoza
                             </h5>
 
                             {/* Imagem visível apenas no Mobile entre o nome e o título */}
-                            <div className="d-lg-none d-flex justify-content-center my-4">
+                            <div className="d-lg-none d-flex justify-content-center my-4" data-aos="zoom-in">
                                 <div className="home-image-mobile" style={{
                                     backgroundImage: 'url("/minha-foto.jpg")'
                                 }}></div>
                             </div>
 
-                            <h1 className="intro-title">
+                            <h1 className="intro-title" data-aos="fade-right" data-aos-delay="200">
                                 I'm Anthony
                             </h1>
-                            <div className="mb-4 text-center text-lg-start intro-subtitle">
+                            <div className="mb-4 text-center text-lg-start intro-subtitle" data-aos="fade-right" data-aos-delay="400">
                                 <img
                                     src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=25&pause=1000&color=36BCF7&width=435&lines=Full+Stack+Web+Developer;Freelancer;Creative+Engine"
                                     alt="Typing Animation"
                                 />
                             </div>
-                            <div className="mt-5 d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                            <div className="mt-5 d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="600">
                                 <a href="#work" className="btn-minimal">
                                     My Portfolio
                                 </a>
@@ -45,7 +45,7 @@ const Hero = () => {
 
                     <Col lg={5} className="home-image-col d-none d-lg-block" style={{
                         backgroundImage: 'url("/minha-foto.jpg")'
-                    }}>
+                    }} data-aos="fade-left" data-aos-delay="400">
                         {/* The background image is set via inline style for easy user replacement */}
                     </Col>
                 </Row>

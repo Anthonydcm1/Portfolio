@@ -43,18 +43,18 @@ const Tech = () => {
     return (
         <section id="tech" style={{ backgroundColor: '#111' }}>
             <Container>
-                <div className="text-center mb-5">
+                <div className="text-center mb-5" data-aos="fade-up">
                     <h2 className="skills-heading">Skills</h2>
                 </div>
 
                 {skillCategories.map((group) => (
                     <div key={group.category} className="mb-5 text-center">
-                        <h4 className="text-uppercase fw-bold mb-4 opacity-50" style={{ letterSpacing: '4px', fontSize: '1rem' }}>
+                        <h4 className="text-uppercase fw-bold mb-4 opacity-50" style={{ letterSpacing: '4px', fontSize: '1rem' }} data-aos="fade-in">
                             {group.category}
                         </h4>
                         <Row className="justify-content-center g-4">
-                            {group.skills.map((skill) => (
-                                <Col key={skill.name} xs={6} sm={4} md={3} lg={2}>
+                            {group.skills.map((skill, index) => (
+                                <Col key={skill.name} xs={6} sm={4} md={3} lg={2} data-aos="flip-left" data-aos-delay={index * 50}>
                                     <div className="skill-card h-100">
                                         <div className="fs-1 mb-2">
                                             {skill.icon}
