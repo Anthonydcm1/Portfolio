@@ -17,7 +17,7 @@ const experiences = [
     {
         title: "System Engineer",
         company_name: "Instituto Universitário Politécnico Santiago Mariño",
-        date: "2011 - 2018 (não concluído)",
+        date: "2011 - 2018",
         points: []
     },
     {
