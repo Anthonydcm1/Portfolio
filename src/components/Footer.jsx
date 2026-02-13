@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import VisitCounter from './VisitCounter';
 
 const Footer = ({ onContactClick }) => {
     const scrollToSection = (e, sectionId) => {
@@ -12,7 +13,8 @@ const Footer = ({ onContactClick }) => {
     return (
         <footer>
             <div className="text-center bg-black p-4">
-                <p>©2026 Anthony Correia | All rights reserved</p>
+                <p className="mb-2">©2026 Anthony Correia | All rights reserved</p>
+                <VisitCounter />
                 <div className="d-flex justify-content-center align-items-center gap-4 my-4 flex-wrap">
                     <a href="#about" className="text-white text-decoration-none hover-opacity" onClick={(e) => scrollToSection(e, 'about')}>About</a>
                     <a href="#experience" className="text-white text-decoration-none hover-opacity" onClick={(e) => scrollToSection(e, 'experience')}>Experience</a>
