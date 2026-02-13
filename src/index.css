@@ -265,47 +265,51 @@ section {
 }
 
 /* Visit Counter Styles */
+.footer-container {
+  position: relative;
+  padding: 2.5rem 1rem;
+}
+
 .visit-counter {
-  display: inline-flex;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 10px 20px;
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   font-family: 'Inter', sans-serif;
-  margin: 15px 0;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
   cursor: default;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .visit-counter:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(20, 186, 232, 0.4);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(20, 186, 232, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(20, 186, 232, 0.3);
 }
 
 .visit-icon {
   color: rgb(20, 186, 232);
-  font-size: 1.1rem;
-  filter: drop-shadow(0 0 5px rgba(20, 186, 232, 0.5));
+  font-size: 0.85rem;
+  filter: drop-shadow(0 0 5px rgba(20, 186, 232, 0.3));
 }
 
 .visit-label {
-  color: var(--secondary-text);
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.7rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .visit-count {
   color: var(--text-color);
-  font-weight: 800;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   background: linear-gradient(135deg, #fff 0%, rgb(20, 186, 232) 100%);
   background-clip: text;
   -webkit-background-clip: text;
