@@ -18,6 +18,7 @@ const Projects = () => {
         {
             id: 2,
             title: "Dental Clinic Dr. Daniel Baptista",
+            image: "logodanielb.png",
             description: t.projects.clinic,
             link: "https://www.clinicadanielbaptista.pt/"
         },
