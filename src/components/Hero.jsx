@@ -1,8 +1,11 @@
+// Hero section - uses language context for translated content
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = ({ onContactClick }) => {
+    const { t } = useLanguage();
+
     const scrollToSection = (e, sectionId) => {
         e.preventDefault();
         const element = document.getElementById(sectionId);
@@ -18,7 +21,7 @@ const Hero = ({ onContactClick }) => {
                     <Col lg={7} className="d-flex align-items-center">
                         <div className="intro-text-wrapper ms-lg-5">
                             <h5 className="text-uppercase tracking-widest mb-4" style={{ letterSpacing: '8px', color: 'var(--secondary-text)' }} data-aos="fade-down">
-                                Anthony Correia
+                                {t.hero.badge}
                             </h5>
 
                             {/* Imagem visível apenas no Mobile entre o nome e o título */}
@@ -29,7 +32,7 @@ const Hero = ({ onContactClick }) => {
                             </div>
 
                             <h1 className="intro-title" data-aos="fade-right" data-aos-delay="200">
-                                I'm Anthony
+                                {t.hero.title}
                             </h1>
                             <div className="mb-4 text-center text-lg-start intro-subtitle" data-aos="fade-right" data-aos-delay="400">
                                 <img
@@ -39,13 +42,13 @@ const Hero = ({ onContactClick }) => {
                             </div>
                             <div className="mt-5 d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="600">
                                 <a href="#projects" className="btn-minimal" onClick={(e) => scrollToSection(e, 'projects')}>
-                                    My Portfolio
+                                    {t.hero.btn_portfolio}
                                 </a>
                                 <a href="resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-minimal" style={{ backgroundColor: 'white', color: 'black' }}>
-                                    Download CV
+                                    {t.hero.btn_cv}
                                 </a>
                                 <button onClick={onContactClick} className="btn-minimal bg-transparent">
-                                    Contact
+                                    {t.hero.btn_contact}
                                 </button>
                             </div>
                         </div>
