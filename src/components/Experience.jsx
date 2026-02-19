@@ -1,42 +1,19 @@
+// Experience section - uses language context for translated content
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-
-const experiences = [
-    // {
-    // title: "Full Stack Developer",
-    // company_name: "CESAE Digital",
-    // date: "2025 - Present",
-    // points: ["Leading cloud-native application development.", "CI/CD pipeline management."]
-    // },
-    {
-        title: "Bachelor's Degree in Computer Science",
-        company_name: "U.E.C.P 'Rafael Maria Baralt'",
-        date: "2010 - 2011",
-        points: []
-    },
-    {
-        title: "System Engineer",
-        company_name: "Instituto Universitário Politécnico Santiago Mariño",
-        date: "2011 - 2018",
-        points: []
-    },
-    {
-        title: "Frontend Developer",
-        company_name: "CESAE Digital",
-        date: "2025 - 2026",
-        points: ["Developing responsive UIs for global clients.", "UI/UX implementation."]
-    },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 const Experience = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="experience">
             <Container>
                 <div className="section-title-wrapper" data-aos="fade-up">
-                    <h2 className="section-title-main">Experience</h2>
+                    <h2 className="section-title-main">{t.experience.title}</h2>
                 </div>
 
-                {experiences.map((exp, index) => (
+                {t.experience.items.map((exp, index) => (
                     <Row key={index} className="mb-5 align-items-baseline" data-aos="fade-up" data-aos-delay={index * 100}>
                         <Col md={3}>
                             <h5 className="fw-bold opacity-50">{exp.date}</h5>

@@ -69,6 +69,43 @@ p {
   transition: 0.3s;
 }
 
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--secondary-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: color 0.25s ease;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--text-color);
+}
+
+.lang-btn.active {
+  color: var(--text-color);
+}
+
+.lang-separator {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.65rem;
+  line-height: 1;
+  user-select: none;
+}
+
 /* Home Section Split Layout */
 .home-section {
   min-height: 100vh;
