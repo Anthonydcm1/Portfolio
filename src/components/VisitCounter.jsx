@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaEye } from 'react-icons/fa';
+import { supabase } from '../supabaseClient';
 
 /**
  * VisitCounter Component
- * Fetches and displays the number of visits using the Counter API.
+ * Fetches and increments the number of visits using Supabase.
  */
 const VisitCounter = () => {
     const [visits, setVisits] = useState('...');
@@ -11,19 +12,21 @@ const VisitCounter = () => {
     useEffect(() => {
         const fetchVisits = async () => {
             try {
-                // Using Counter API (v1) to increment and get the count
-                // Namespace: anthonydcm1-portfolio, Key: visits
-                const response = await fetch('https://api.counterapi.dev/v1/anthonydcm1-portfolio/visits/up');
-                const data = await response.json();
+                // Call the SQL function we created in Supabase
+                const { data, error } = await supabase.rpc('increment_visits', { 
+                    row_id: 'portfolio_visits' 
+                });
 
-                if (data && data.count !== undefined) {
-                    setVisits(data.count.toLocaleString());
+                if (error) throw error;
+
+                if (data !== null) {
+                    setVisits(data.toLocaleString());
                 } else {
                     setVisits('0');
                 }
             } catch (error) {
-                console.error('Erro ao buscar contador de visitas:', error);
-                setVisits('N/A');
+                console.error('Erro ao buscar contador de visitas (Supabase):', error);
+                setVisits('---');
             }
         };
 
