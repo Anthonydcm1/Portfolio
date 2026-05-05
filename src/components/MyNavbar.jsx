@@ -31,7 +31,7 @@ const MyNavbar = ({ onContactClick }) => {
     return (
         <header className="header-minimal">
             <a href="#home" className="logo-minimal" onClick={(e) => scrollToSection(e, 'home')}>
-                <img src="/favicon.png" alt="Logo" style={{ height: '40px', width: 'auto' }} />
+                <img src="favicon.png" alt="Logo" style={{ height: '40px', width: 'auto' }} />
             </a>
 
             <div className="d-flex align-items-center gap-4">
